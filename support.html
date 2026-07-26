@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Lumi</title>
+<meta name="description" content="Support, FAQ, and contact information for the Lumi sunscreen and UV tracker app.">
+<meta name="robots" content="index, follow">
+<style>
+  /* Light-only palette: white surface, blue accent, near-black text. Matches privacy.html / terms.html. */
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #f6f9fd;
+    --text: #14181f;
+    --muted: #5b6472;
+    --accent: #0b5ed7;
+    --accent-soft: #e8f0fc;
+    --border: #dbe3ee;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  header {
+    padding: 3.5rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  h1 {
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 .6rem;
+    letter-spacing: -0.02em;
+  }
+  .app { color: var(--accent); }
+  .lede { color: var(--muted); font-size: 1.05rem; margin: 0; max-width: 34rem; }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.75rem 0 .85rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  p, li { margin: 0 0 1rem; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin-bottom: .55rem; }
+  strong { font-weight: 650; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  code {
+    font: 500 .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .1em .35em;
+  }
+
+  /* Contact card */
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.4rem;
+    margin: 0;
+  }
+  .contact-text p { margin: 0; }
+  .contact-text .email { font-size: 1.15rem; font-weight: 650; }
+  .contact-text .response { color: var(--muted); font-size: .9rem; margin-top: .25rem; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+    padding: .7rem 1.3rem;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+  .btn:hover { opacity: .9; text-decoration: none; }
+
+  /* FAQ */
+  details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0;
+    margin: 0 0 .75rem;
+    background: var(--bg);
+  }
+  details[open] { border-color: var(--accent); }
+  summary {
+    cursor: pointer;
+    font-weight: 650;
+    padding: .95rem 1.1rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.3rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  details[open] summary::after { content: "\2212"; }
+  details .answer { padding: 0 1.1rem 1.05rem; color: var(--text); }
+  details .answer p:last-child { margin-bottom: 0; }
+  details .answer ol, details .answer ul { margin: .5rem 0 1rem; }
+
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.15rem;
+    margin: 1.5rem 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a + a { margin-left: 1rem; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Support<br><span class="app">Lumi</span></h1>
+  <p class="lede">Questions, troubleshooting, and how to reach us about the UV tracker and sunscreen reminder app.</p>
+</header>
+
+<div class="contact">
+  <div class="contact-text">
+    <p class="email">buraksenturktr@icloud.com</p>
+    <p class="response">We aim to respond within 2 business days.</p>
+  </div>
+  <a class="btn" href="mailto:buraksenturktr@icloud.com?subject=Lumi%20support">Email us</a>
+</div>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<details>
+  <summary>Why does Lumi show &ldquo;No UV Data&rdquo; or a dash instead of a number?</summary>
+  <div class="answer">
+    <p>This means Lumi could not read a UV reading for your location. The most common causes:</p>
+    <ul>
+      <li><strong>Location permission is off.</strong> Tap the banner on the Home screen, or go to <strong>Settings app &rarr; Lumi &rarr; Location</strong> and set it to &ldquo;While Using the App.&rdquo;</li>
+      <li><strong>No internet connection.</strong> Lumi fetches live data from Apple Weather and needs a connection to do so.</li>
+      <li><strong>Apple Weather has no data for your exact spot</strong> (rare, usually resolves within a few minutes).</li>
+    </ul>
+    <p>Lumi never shows a UV level it isn&rsquo;t sure about &mdash; if the reading is missing, the app tells you it&rsquo;s missing rather than guessing.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How does the reapply timer work?</summary>
+  <div class="answer">
+    <p>When you tap <strong>I Applied Sunscreen</strong>, Lumi starts a countdown based on your skin profile: about 90 minutes for Fair, 120 for Medium, and 150 for Dark. You can fine-tune the exact interval in <strong>Settings &rarr; Protection</strong>.</p>
+    <p>When the timer runs out, Lumi sends a single reminder notification. It does not repeat or nag &mdash; you&rsquo;ll get exactly one notification per application.</p>
+  </div>
+</details>
+
+<details>
+  <summary>I'm not getting reminder notifications.</summary>
+  <div class="answer">
+    <p>Check the following, in order:</p>
+    <ol>
+      <li>Open <strong>Settings app &rarr; Notifications &rarr; Lumi</strong> and make sure &ldquo;Allow Notifications&rdquo; is on.</li>
+      <li>Make sure Focus modes (Do Not Disturb, Sleep, Work) aren&rsquo;t silencing the Lumi app.</li>
+      <li>Confirm you tapped <strong>I Applied Sunscreen</strong> after applying &mdash; the timer only starts from that tap, not automatically.</li>
+      <li>If you use <strong>Smart UV Alerts</strong> or the <strong>Daily Morning Briefing</strong> (Lumi Pro features), confirm both are toggled on in <strong>Settings</strong>.</li>
+    </ol>
+  </div>
+</details>
+
+<details>
+  <summary>How do I change my skin type?</summary>
+  <div class="answer">
+    <p>Go to <strong>Settings &rarr; Skin Profile</strong> and select Fair, Medium, or Dark. This updates your default reapply interval immediately and personalises the wording of your reminders.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What's included in Lumi Pro, and how do I subscribe?</summary>
+  <div class="answer">
+    <p>Lumi is free to download and use. <strong>Lumi Pro</strong> is an optional subscription (weekly, monthly, or yearly) that unlocks:</p>
+    <ul>
+      <li>Smart high-UV alerts</li>
+      <li>The daily morning UV briefing</li>
+      <li>Custom reminder intervals</li>
+    </ul>
+    <p>You can subscribe from the card at the top of the <strong>Settings</strong> tab. Pricing is shown before you confirm the purchase and may vary by country.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How do I cancel or manage my subscription?</summary>
+  <div class="answer">
+    <p>Subscriptions are billed and managed entirely through your Apple Account &mdash; we do not have access to your payment details and cannot cancel a subscription on your behalf.</p>
+    <p>Two ways to manage it:</p>
+    <ol>
+      <li>In Lumi, open <strong>Settings</strong> and tap the <strong>Lumi Pro</strong> row (only visible once you&rsquo;re subscribed) to open subscription management.</li>
+      <li>Or go to <strong>Settings app &rarr; [your name] &rarr; Subscriptions</strong> on your device.</li>
+    </ol>
+    <p>Cancelling stops future renewals; your Pro features remain active until the end of the period you already paid for.</p>
+  </div>
+</details>
+
+<details>
+  <summary>I paid for Lumi Pro but it's not unlocked. What do I do?</summary>
+  <div class="answer">
+    <p>This is usually fixed by restoring your purchase:</p>
+    <ol>
+      <li>Open the Lumi Pro paywall (tap the upgrade card in <strong>Settings</strong>).</li>
+      <li>Tap <strong>Restore Purchases</strong>.</li>
+    </ol>
+    <p>If that doesn&rsquo;t resolve it, email us with the Apple Account email you subscribed with (not your Lumi data, since Lumi doesn&rsquo;t use email accounts) and the approximate date of purchase, and we&rsquo;ll look into it.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Does Lumi work outside my home country?</summary>
+  <div class="answer">
+    <p>Yes. UV data is fetched live for wherever your device is, anywhere in the world, as long as you have an internet connection and location permission enabled.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What languages does Lumi support?</summary>
+  <div class="answer">
+    <p>Lumi is fully localised in English, Turkish, Spanish, Japanese, Korean, German, French, Italian, Portuguese, and Thai. The app follows your device&rsquo;s system language automatically &mdash; there is no in-app language switch.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Is my sunscreen application history backed up anywhere?</summary>
+  <div class="answer">
+    <p>No. Your streaks, weekly charts, and application history are stored only on your device and are not uploaded to our servers. If you delete Lumi or switch to a new device, this history does not carry over.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How do I delete my account and data?</summary>
+  <div class="answer">
+    <p>Uninstalling Lumi immediately deletes your on-device history (streaks, charts, application log) and stops all data collection from your device.</p>
+    <p>To also delete the record we hold on our servers (your device identifier, notification settings, and subscription status), email <a href="mailto:buraksenturktr@icloud.com">buraksenturktr@icloud.com</a> and we&rsquo;ll erase it. See the <a href="privacy.html#deletion">Privacy Policy</a> for details.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Is Lumi a medical product? Can I rely on it instead of sunscreen?</summary>
+  <div class="answer">
+    <p>No. Lumi is a general wellness tool, not a medical device, and its UV readings and timers are general guidance rather than personalised medical advice. Always follow the instructions on your sunscreen product and consult a healthcare professional about your skin. See the <a href="terms.html#health">Terms of Use</a> for the full notice.</p>
+  </div>
+</details>
+
+<div class="callout">
+  <p>Didn&rsquo;t find your answer? Email <a href="mailto:buraksenturktr@icloud.com">buraksenturktr@icloud.com</a> and include your device model, iOS version, and what you were doing when the issue happened &mdash; it helps us fix things faster.</p>
+</div>
+
+<h2 id="legal">Legal</h2>
+<p><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>
+
+<footer>
+  <p>Lumi &mdash; Sunscreen &amp; UV Tracker &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>
+</footer>
+
+</main>
+</body>
+</html>
